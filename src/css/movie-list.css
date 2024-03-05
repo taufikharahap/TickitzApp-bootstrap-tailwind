@@ -1,0 +1,191 @@
+body {
+    font-family: "Mulish", sans-serif;
+}
+
+body, main, .con-subscribe, footer {
+    overflow-x: hidden !important;
+}
+.nav-menu {
+    height: 104px;
+}
+
+.content-carousel {
+    width: 30%;
+}
+
+.dark-image {
+    width: 100%;
+    height: 77%;
+    background-color: #00000099;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.dark-image-hero {
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.con-details-buy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 77%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.con-details-buy a {
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 12px 18px 12px 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #F8FAFC;
+    width: 80%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.con-details-buy .btn-buy {
+    background-color: #1D4ED8;
+    border: none;
+}
+
+.card-movie {
+    width: 264px;
+}
+
+.card-movie:hover .con-details-buy {
+    opacity: 1;
+}
+
+.recomended {
+    width: 50%;
+    background-color: #1D4ED8;
+    border-radius: 10px 20px 20px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 10px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    position: absolute;
+    top: 2%;
+    left: -10px;
+    z-index: 0;
+}
+
+.shadow-recomended{
+    width: 8px;
+    height: 13px;
+    background-color: #163899;
+    position: absolute;
+    top: 9%;
+    left: -6px;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.list-movie{
+    padding: 0 !important;
+}
+
+.input-subscribe {
+    width:230px;
+    height: 60px;
+}
+.input-subscribe::placeholder {
+    color: #FFFFFF;
+}
+
+.circle-subscribe {
+    position: absolute;
+    bottom: -50%;
+    right: -10%;
+    width: 237.24px;
+    height: 229px;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.footer-icon-tickit p{
+    width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-menu {
+        height: 91px;
+    }
+
+    .content-carousel h5 {
+        font-size: 12px;
+    }
+    .content-carousel p {
+        font-size: 16px;
+    }
+
+    .card-movie {
+        max-width: 500px !important;
+    }
+
+    .input-subscribe {
+        width: 80%;
+        height: 40px;
+    }
+
+    .circle-subscribe {
+        bottom: -20%;
+        right: -20%;
+        width: 100px;
+        height: 100px;
+        border: 7px solid #FFFFFF;
+        z-index: 1;
+    }
+
+    .footer-icon-tickit p{
+        width: 100%;
+        padding: 0 40px !important;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .footer-sponsor {
+        margin-bottom: 40px!important;
+        margin-top: 40px!important;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+
+    .content-carousel {
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 20px;
+    }
+
+
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/payment.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'mulish': ['Mulish', 'sans-serif']
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-mulish">
+    <header class="fixed top-0 left-0 w-screen flex h-24 md:h-fit flex-row justify-between items-center px-8 md:px-20 py-6 bg-white border-b border-[#BABABA14]">
+        <a class="flex justify-start icon-tickitz" href="../index.html">
+            <img src="../src/images/icons/Tickitz 1.png" alt="icon tickitz app">
+        </a>
+        <nav class="absolute top-24 left-0 z-50 md:static bg-neutral-950/30 #00000099 w-0 transition-all ease-in-out overflow-hidden md:w-1/3 h-screen md:h-auto bg-current side-menu" id="side-menu">
+            <ul class="bg-white flex flex-col md:flex-row gap-y-7 justify-start md:justify-around w-2/3 md:w-full h-screen md:h-auto text-sm px-8 pt-8 md:pt-0 md:px-0 nav-list">
+                <li><a class="font-normal text-sm text-[#0F172A]" href="">Home</a></li>
+                <li><a class="font-normal text-sm text-[#0F172A]" href="../index.html">Movie</a></li>
+                <li><a class="font-normal text-sm text-[#0F172A]" href="">Buy Ticket</a></li>
+                <ul class="flex gap-x-3 md:hidden" id="con-btn-sign-side">
+                    <li id="btn-sign-in"><a class="text-sm text-blue-700 border border-blue-700 rounded px-3 py-2" href="./pages/sign-in.html">SignIn</a></li>
+                    <li id="btn-sign-up"><a class="text-sm text-white bg-blue-700 px-3 py-2 rounded" href="./pages/sign-up.html">Sign Up</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <div class="hidden md:flex justify-end gap-x-7 w-1/4 text-sm con-btn-sign">
+            <a class="text-blue-700 border border-blue-700 rounded px-4 py-3 hover:bg-blue-900 hover:text-white btn-sign-in" href="./pages/sign-in.html">SignIn</a>
+            <a class="text-white bg-blue-700 px-4 py-3 rounded hover:bg-blue-900 btn-sign-up" href="./pages/sign-up.html">Sign Up</a>
+        </div>
+        <button class="flex md:hidden" id="btn-menu" type="button">
+            <img src="../src/images/icons/gg_menu-right-alt.svg" alt="">
+        </button>
+    </header>
+    <main class="mt-24 bg-[#A0A3BD33] flex flex-col items-center pt-12 pb-16">
+        <div class="hidden w-1/2 md:flex flex-row gap-x-5 con-flow-payment mb-10 justify-center">
+            <div class="flex flex-col justify-center items-center gap-y-2 text-center">
+                <p class="bg-[#008000] w-10 h-10 leading-10  text-white rounded-full">&check;</p>
+                <p class="text-sm text-[#4E4B66]">Dates And Time</p>
+            </div>
+            <div class="text-[#A0A3BD] flex items-center">
+                <span>- - - - -</span>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-2 text-center">
+                <p class="bg-[#008000] w-10 h-10 leading-10  text-white rounded-full">&check;</p>
+                <p class="text-sm text-[#4E4B66]">Seat</p>
+            </div>
+            <div class="text-[#A0A3BD] flex items-center">
+                <span>- - - - -</span>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-2 text-center">
+                <p class="bg-blue-700 w-10 h-10 leading-10  text-white rounded-full">3</p>
+                <p class="text-sm text-[#4E4B66]">Payment</p>
+            </div>
+        </div>
+        <section class="flex flex-col gap-y-5 w-10/12 md:w-1/2 bg-white rounded-lg md:rounded overflow-hidden px-6 py-10 md:px-10 md:py-12">
+            <h3 class="font-bold text-2xl">Payment Info</h3>
+            <div class="flex flex-col gap-y-4 mb-5">
+                <p class="text-[#8692A6] font-normal text-sm">DATE & TIME</p>
+                <span  class="pb-2 border-b text-base font-normal">Tuesday, 07 July 2020 at 02:00pm</span>
+                <p class="text-[#8692A6] font-normal text-sm">MOVIE TITLE</p>
+                <span class="pb-2 border-b text-base font-normal">Spider-Man: Homecoming</span>
+                <p class="text-[#8692A6] font-normal text-sm">CINEMA NAME</p>
+                <span class="pb-2 border-b text-base font-normal">CineOne21 Cinema</span>
+                <p class="text-[#8692A6] font-normal text-sm">NUMBER OF TICKETS</p>
+                <span class="pb-2 border-b text-base font-normal">3 pieces</span>
+                <p class="text-[#8692A6] font-normal text-sm">TOTAL PAYMENT</p>
+                <span class="text-blue-700 pb-2 border-b text-base font-bold">$30.00</span>
+            </div>
+            <h3 class="font-bold text-2xl">Personal Information</h3>
+            <div class="flex flex-col gap-y-2 mb-5">
+                <p class="text-[#8692A6] font-normal text-sm">Full Name</p>
+                <span class="text-[#4E4B66] font-normal text-sm md:text-lg border px-8 py-3 rounded">Jonas El Rodriguez</span>
+                <p class="text-[#8692A6] font-normal text-sm">Email</p>
+                <span class="text-[#4E4B66] font-normal text-sm md:text-lg border px-8 py-3 rounded">jonasrodri123@gmail.com</span>
+                <p class="text-[#8692A6] font-normal text-sm">Phone Number</p>
+                <span class="text-[#4E4B66] font-normal text-lg border px-8 py-3 rounded"><span class="border-r pr-3 mr-3">+62</span>81445687121</span>
+            </div>
+            <h3 class="font-bold text-2xl">Payment Method</h3>
+            <div class="grid grid-cols-2 gap-x-2 gap-y-10 md:grid-cols-4 md:gap-4">
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/logos_google-pay.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/logos_visa.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/Logo GoPay (SVG-240p) - FileVector69 1.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/logos_paypal.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/Logo DANA (PNG-240p) - FileVector69 1.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/Bank BCA Logo (SVG-240p) - FileVector69 1.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png" alt="">
+                </div>
+                <div class="border-2 rounded-md w-28 h-12 md:w-36 md:h-14 grid justify-center items-center">
+                    <img src="../src/images/icons/ewallet/Vector.png" alt="">
+                </div>
+            </div>
+            <button class="text-[#F7F7FC] text-base font-bold rounded bg-blue-700 hover:bg-blue-900 py-4 mt-7 shadow-xl" type="button">Pay your order</button>
+        </section>
+    </main>
+    <footer class="px-7 md:px-20 pt-20 pb-10">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-4/12">
+                <img class="mb-3" src="../src/images/icons/Tickitz 1.png" alt="icon tickitz">
+                <p class="md:w-2/3 text-[#6E7191] text-base font-normal">Stop waiting in line. Buy tickets
+                    conveniently, watch movies quietly.</p>
+            </div>
+            <div class="w-full md:w-2/12">
+                <p class="text-black font-bold text-base mb-5 mt-8 md:mt-0">Explore</p>
+                <div class="flex flex-row gap-x-5 gap-y-3 justify-between flex-wrap md:flex-col ">
+                    <p class="text-[#4E4B66] text-sm font-normal mb-2">Cinemas</p>
+                    <p class="text-[#4E4B66] text-sm font-normal mb-2">Movie List</p>
+                    <p class="text-[#4E4B66] text-sm font-normal mb-2">Notification</p>
+                    <p class="text-[#4E4B66] text-sm font-normal mb-2">My Ticket</p>
+                </div>
+            </div>
+            <div class="w-full md:w-3/12">
+                <p class="text-black font-bold text-base mb-5 mt-8 md:mt-0   ">Our Sponsor</p>
+                <div class="flex flex-row md:flex-col gap-x-4 flex-wrap justify-between">
+                    <img class="mb-5 w-20 md:w-fit h-auto" src="../src/images/icons/ebv.id 2.png" alt="">
+                    <img class="mb-5 w-24 md:w-fit h-auto" src="../src/images/icons/CineOne21 2.png" alt="">
+                    <img class="mb-5 w-20 md:w-fit h-auto" src="../src/images/icons/hiflix 2.png" alt="">
+                </div>
+            </div>
+            <div class="w-full md:w-3/12">
+                <p class="text-black font-bold text-base mb-7 mt-8 md:mt-0">Follow us</p>
+                <div class="flex flex-row md:flex-col gap-x-7">
+                    <div class="flex flex-row gap-x-3 mb-4">
+                        <img src="../src/images/icons/eva_facebook-outline.svg" alt="">
+                        <a class="hidden md:inline text-[#6E7191] text-sm font-semibold" href="">Tickitz Cinema id</a>
+                    </div>
+                    <div class="flex flex-row gap-x-3 mb-4">
+                        <img src="../src/images/icons/bx_bxl-instagram.svg" alt="">
+                        <a class="hidden md:inline text-[#6E7191] text-sm font-semibold" href="">tickitz.id</a>
+                    </div>
+                    <div class="flex flex-row gap-x-3 mb-4">
+                        <img src="../src/images/icons/eva_twitter-outline.svg" alt="">
+                        <a class="hidden md:inline text-[#6E7191] text-sm font-semibold" href="">tickitz.id</a>
+                    </div>
+                    <div class="flex flex-row gap-x-3 mb-4">
+                        <img src="../src/images/icons/feather_youtube.svg" alt="">
+                        <a class="hidden md:inline text-[#6E7191] text-sm font-semibold" href="">Tickitz Cinema id</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mt-8 text-left md:text-center text-[#4E4B66] text-sm font-normal">© 2020 Tickitz. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const sideMenu = document.querySelector(".side-menu");
+            const btnMenu = document.querySelector("#btn-menu");
+            
+            btnMenu.addEventListener("click", function() {
+                sideMenu.classList.toggle("w-screen");
+            })
+            
+            document.addEventListener("click", function(e){
+                
+                if (e.target.id == "side-menu") {
+                    sideMenu.classList.toggle("w-screen");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
