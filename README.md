@@ -2,21 +2,19 @@
   HTML, CSS and Responsive Web
 </h1>
 
-<p align="center"><img src="./src/images/Screen-Shot-web.png" width="100%" alt="Screenshot Page" /></p>
+<p align="center"><img src="./src/images/sc.png" width="100%" alt="Screenshot Page" /></p>
 
 ## 💻 Built with
 
-* Html5 Semantic
-* Grid/Flexbox
-* External CSS
-* Media Query
+* Bootstrap
+* Tailwind
 
 ## 🛠️ Installation Steps
 
 * Clone the repository
 
 ```bash
-git clone https://github.com/taufikharahap/front-end-html-css-responsive-web-tickitz.git
+git clone https://github.com/taufikharahap/slicing-ticket-web-bootstrap-tailwind.git
 ```
 
 You are all set!
