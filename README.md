@@ -1,5 +1,5 @@
 <h1 align="center">
-  HTML, CSS and Responsive Web
+  Slicing With Bootstrap and Tailwind
 </h1>
 
 <p align="center"><img src="./src/images/sc.png" width="100%" alt="Screenshot Page" /></p>
